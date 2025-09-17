@@ -1,0 +1,102 @@
+.header-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.dot{
+    color: #9929EA;
+}
+
+
+.leftSide{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.davide-me {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.davide-me:hover {
+    color: #9929EA;
+    transition: color 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.davide-me:hover .dot {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.davide-me span {
+    display: inline-block;
+    font-size: 1.2rem;
+    animation: wave 1.5s ease-in-out infinite;
+}
+
+.davide-me  span:nth-child(1) {
+    animation-delay: 0s;
+}
+.davide-me  span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.davide-me  span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.davide-me  span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.davide-me  span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+.davide-me  span:nth-child(6) {
+    animation-delay: 1s;
+}
+.davide-me  span:nth-child(7) {
+    animation-delay: 1.2s;
+}
+.davide-me  span:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+.rightSide{
+    position: absolute;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
