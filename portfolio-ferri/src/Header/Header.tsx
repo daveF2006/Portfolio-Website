@@ -1,4 +1,3 @@
-import 'animate.css';
 import './Header.css';
 
 
