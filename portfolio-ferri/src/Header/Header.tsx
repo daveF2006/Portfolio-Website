@@ -1,3 +1,4 @@
+
 import './Header.css';
 
 
@@ -14,7 +15,9 @@ function Header() {
             <span>d</span><span>a</span><span>v</span><span>i</span><span>d</span><span>e</span><span className='dot'>.</span><span>m</span><span>e</span>
           </a>
         </div>
-        <div className="rightSide">lista delle pagine</div>
+        <div className="rightSide">
+          
+        </div>
       </div>
     </header>
   );
