@@ -101,7 +101,7 @@
   top: 0;
   left: -40px;
   transform: skewX(45deg);
-  background-color: #D69ADE;
+  background-color: #ffff;
   z-index: -1;
   transition: all 1s;
 }
@@ -138,7 +138,7 @@
   top: 0;
   left: -40px;
   transform: skewX(45deg);
-  background-color: #D69ADE;
+  background-color: #ffff;
   z-index: -1;
   transition: all 1s;
 }
@@ -150,3 +150,14 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.progetto-icona{
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+  background-color:#fff;
+  border-radius: 4px;
+  border: 1px solid #fff;
+}
+  

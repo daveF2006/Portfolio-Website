@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Welcome.css";
 import Header from "../Header/Header";
 import Background from "../assets/Background";
+import progetto from "./progetto.png";
+import libro from "./libro.png";
 //COMPONENTE CHE SI ATTIVA ALL'APERTURA DELLA PAGINA
 
 
@@ -142,11 +144,11 @@ const Welcome: React.FC = () => {
 >
 
         <button className="project-button">
-          Have a Project?
+          <img src={progetto} alt="" className="progetto-icona"/>Have a Project?
         </button>
 
         <button className="readmore-button">
-          Read More
+          <img src={libro} alt="" className="progetto-icona"/>Read More
         </button>
 
       </div>
