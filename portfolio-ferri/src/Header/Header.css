@@ -11,14 +11,14 @@
 }
 
 .dot{
-    color: #9929EA;
+    color: #FAEB92;
 }
 
 
 .leftSide{
     position: absolute;
-    left: 50px;
-    top: 50px;
+    left: 70px;
+    top: 70px;
     display: flex;
     align-items: center;
 }
@@ -36,7 +36,7 @@
 }
 
 .davide-me:hover {
-    color: #9929EA;
+    color: #FAEB92;
     transition: color 0.3s ease;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
@@ -95,8 +95,80 @@
 
 
 .rightSide{
+    top: 50px;
     position: absolute;
     right: 20px;
-    display: flex;
     align-items: center;
+    display: flex;
+    flex-direction: column;
 }
+
+.sections{
+    margin-right: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.links{
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style-type: none;
+}
+
+.welcome-link, .projects-link, .contact-link, .about-link{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.welcome-link:hover, .projects-link:hover, .contact-link:hover, .about-link:hover{
+    font-weight: bold;
+    color: #fff;
+    transition: 0.2s ease;
+
+}
+.active-link {
+  text-decoration: underline;
+  font-weight: bolder;
+  color: #FAEB92;
+}
+.welcome-link, .projects-link, .contact-link, .about-link {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+    padding-bottom: 4px;
+}
+
+.welcome-link::after,
+.projects-link::after,
+.contact-link::after,
+.about-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #FAEB92;
+    transition: width 0.3s cubic-bezier(.4,0,.2,1), left 0.3s cubic-bezier(.4,0,.2,1);
+    color: #FAEB92;
+}
+
+.active-link::after {
+    transition: 0.2s ease;
+    width: 100%;
+    color: #FAEB92;
+}
+

@@ -40,3 +40,18 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(circle at 20% 20%, #9c57d0 60%, #8ca6db 80%, #4f2c91 100%);
+  opacity: 0.15;
+  z-index: 9999;
+  box-shadow: 0 0 16px 4px #4f2c9144, 0 0 8px 2px #b993d644;
+  transition: opacity 0.2s;
+  will-change: transform;
+}

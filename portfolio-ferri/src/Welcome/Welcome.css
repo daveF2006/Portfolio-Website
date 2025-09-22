@@ -1,4 +1,8 @@
+/*
+  box-shadow: 0 0 10px #9929EA;
+  border-radius: 5px;
 
+*/
 .title {
   white-space: pre-line;
     font-size: 3rem;
@@ -41,7 +45,10 @@
   color: #9929EA;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
+  
 }
+
+
 
 
 .welcome-part3{
@@ -50,4 +57,96 @@
 
 .title.dragged {
  transform: translateY(-50px);
+}
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+
+}
+
+
+.project-button{
+ 
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #D69ADE;
+  font: bold;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  border-radius: 10px;
+  
+}
+
+.project-button:hover {
+  color: #9929EA  ;
+  border: 2px solid #9929EA ;
+}
+
+.project-button::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: #D69ADE;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.project-button:hover::before {
+  width: 160%;
+}
+
+.readmore-button{
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #D69ADE;
+  font: bold;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.readmore-button:hover {
+  color: #9929EA  ;
+  border: 2px solid #9929EA ;
+}
+
+.readmore-button::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: #D69ADE;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.readmore-button:hover::before {
+  width: 160%;
+}
+.button-container.show {
+  opacity: 1;
+  transform: translateY(0);
 }

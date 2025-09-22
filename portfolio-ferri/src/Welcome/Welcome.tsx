@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Welcome.css";
+import Header from "../Header/Header";
+import Background from "../assets/Background";
 //COMPONENTE CHE SI ATTIVA ALL'APERTURA DELLA PAGINA
 
 
 const Welcome: React.FC = () => {
+
+  
 
   //Titolo completo che parte subito
   const fullTitle = "Welcome to my Portfolio";
@@ -27,6 +31,15 @@ const Welcome: React.FC = () => {
   // Cursor blink fluido
   const cursorIntervalRef = useRef<number | null>(null);
 
+    const [showButtons, setShowButtons] = useState(false);
+
+  // Simula la fine della scrittura del testo (sostituisci con la tua logica di typing)
+  // Ad esempio, se usi un effetto typing, chiama setShowButtons(true) quando finisce
+  useEffect(() => {
+    // Supponiamo che la scrittura duri 2.5 secondi
+    const timer = setTimeout(() => setShowButtons(true), 5300);
+    return () => clearTimeout(timer);
+    }, []);
   // Effetto di scrittura del titolo completo
   useEffect(() => {
     cursorIntervalRef.current = window.setInterval(() => {
@@ -95,9 +108,10 @@ const Welcome: React.FC = () => {
   //Componente html che viene renderizzato
   return (
     
-    
     //Tutto dentro un div con classe welcome-container
     <div className="welcome-container">
+      <Background></Background>
+      <Header></Header>
       {(phase === 0 || phase === 1) && (
         <h1 className="title">
           {typedTitle}
@@ -123,6 +137,19 @@ const Welcome: React.FC = () => {
           </span>
         </h1>
       )}
+
+      <div className={`button-container${showButtons ? " show" : ""}`}
+>
+
+        <button className="project-button">
+          Have a Project?
+        </button>
+
+        <button className="readmore-button">
+          Read More
+        </button>
+
+      </div>
     </div>
   );
 };
