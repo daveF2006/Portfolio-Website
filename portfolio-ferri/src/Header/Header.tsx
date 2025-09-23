@@ -22,7 +22,7 @@ function Header() {
               <li>
                 <Link
                   to="/welcome"
-                  className={`welcome-link${location.pathname === '/welcome' ? ' active-link' : ''}`}
+                  className={`welcome-link${location.pathname === '/' || location.pathname === '/welcome'  ? ' active-link' : ''}`}
                 >
                   HOME
                 </Link>
@@ -37,8 +37,8 @@ function Header() {
               </li>
               <li>
                 <Link
-                  to="/contact"
-                  className={`contact-link${location.pathname === '/contact' ? ' active-link' : ''}`}
+                  to="/contatti"
+                  className={`contact-link${location.pathname === '/contatti' ? ' active-link' : ''}`}
                 >
                   CONTACT
                 </Link>

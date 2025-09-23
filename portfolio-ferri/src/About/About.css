@@ -1,0 +1,61 @@
+/* ...existing code... */
+
+.hello-container {
+    top: -150px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 0;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.hello-container::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #9e6cfc 0%, #b993d6 50%, #8ca6db 100%);
+    opacity: 0.7;
+    box-shadow: 0 2px 12px 0 #4f2c9144;
+    transform: translateX(-50%);
+    transition: width 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+/* Quando vuoi attivare l'animazione, aggiungi la classe .show-border-bottom */
+.hello-container.show-border-bottom::after {
+    width: 70%;
+}
+
+/* ...existing code... */
+
+.about-text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-top: -100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-text{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    text-align: center;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 0;
+}

@@ -3,6 +3,8 @@ import Progetti from './Progetti/Progetti';
 import Welcome from './Welcome/Welcome'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import { useEffect } from 'react';
+import { About } from './About/About';
+import { Contatti } from './Contatti/Contatti';
 
 function App() {
   useEffect(() => {
@@ -48,6 +50,8 @@ function App() {
           <Route path="/" element={<Welcome />} />
           <Route path='/welcome' element={<Welcome/>}/>
           <Route path='/progetti' element={<Progetti/>}/>
+          <Route path='/contatti' element={<Contatti/>}/>
+          <Route path='/about' element={<About/>}/>
         </Routes>
       </Router>
     </>
