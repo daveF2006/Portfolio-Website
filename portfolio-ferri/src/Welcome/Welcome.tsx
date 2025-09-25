@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import Background from "../assets/Background";
 import progetto from "./progetto.png";
 import libro from "./libro.png";
+import { Link } from "react-router-dom";
 
 const Welcome: React.FC = () => {
   const fullTitle = "Welcome to my Portfolio";
@@ -134,10 +135,10 @@ const Welcome: React.FC = () => {
       )}
 
       <div className={`button-container${showButtons ? " show" : ""}`}>
-        <button className="project-button" onClick={() => window.location.href = "/contatti"}>
+        <button className="project-button" onClick={() => < Link to="/contatti" />} >
           <img src={progetto} alt="" className="progetto-icona" />Have a Project?
         </button>
-        <button className="readmore-button" onClick={()=>window.location.href = "/about"}>
+        <button className="readmore-button" onClick={() => < Link to="/about" />}>
           <img src={libro} alt="" className="progetto-icona" />Read More
         </button>
       </div>
