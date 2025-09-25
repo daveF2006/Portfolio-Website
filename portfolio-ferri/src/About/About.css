@@ -17,6 +17,13 @@
     
 }
 
+.hello-container:hover .saluto{
+   /* scale: 1.05;
+    transition: scale 0.3s ease-in-out;
+    */
+    animation: swing 2s;
+}
+
 .hello-container::after {
     content: "";
     position: absolute;
@@ -34,7 +41,7 @@
 
 /* Quando vuoi attivare l'animazione, aggiungi la classe .show-border-bottom */
 .hello-container.show-border-bottom::after {
-    width: 70%;
+    width: 40%;
 }
 
 /* ...existing code... */
@@ -75,6 +82,23 @@
     justify-content: center;
 }
 
+
+
+.lampadina-container:hover .lampadina{
+    
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 16px #b993d6aa) drop-shadow(0 0 32px #8ca6db88) drop-shadow(0 0 48px #8ca6dbaa);
+    
+}
+
+.code-container:hover .code{
+    
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 16px #b993d6aa) drop-shadow(0 0 32px #8ca6db88) drop-shadow(0 0 48px #8ca6dbaa);
+    
+}
+
+
 .lampadina{
     width: 40px;
     height: 40px;
@@ -92,11 +116,13 @@
 
 @keyframes entra {
     0%{
-        transform: translateX(-100px);
+        transform: translateX(0px);
+        scale: 1;
     }
     100% {
-        transform: translateX(80px);
+        transform: translateX(350px);
         opacity: 0;
+        scale: 0.7;
     }
 }
 
@@ -116,6 +142,7 @@
     background-color: rgba(255, 255, 255, 0.107);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+
     /*
     animation-delay: 1s;
     opacity: 0;
@@ -125,12 +152,18 @@
 
 @keyframes esci {
     0%{ 
-        transform: translateX(-200px);
+        transform: translateX(-500px);
         opacity: 0;
+        scale: 0.5;
     }
     100% {
-        transform: translateX(100px);
+        transform: translateX(0px);
         opacity: 1;
+        scale: 1;
     }
 }
 
+.about-text-container:hover{
+    scale: 1.03;
+    transition: scale 0.3s ease-in-out;
+}

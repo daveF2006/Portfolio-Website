@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import { useEffect, useState } from 'react';
 import lampadina from  './lampadina.png';
 import code from './codice.png';
+import 'animate.css';
 
 export function About() {  
     const [showBorder, setShowBorder] = useState(false);
@@ -34,7 +35,7 @@ export function About() {
                     <img src={lampadina} alt="" className='lampadina' />
                 </div>
 
-                <div className='about-text-container'>
+                <div className='about-text-container animate__animated animate__pulse animate__delay-1s'>
                     <p className='about-text'>
                         
                             <i>I'm Davide and I turn your ideas into code.</i>
@@ -46,7 +47,13 @@ export function About() {
                     <img src={code} className='code' alt="" />
                 </div>
             </div>
+
+
         </div>
+            <div className='who-container'>
+                <h4>Who I Am</h4>
+                <p className='who'> My web development journey began a few years ago, and since then I've been sharpening my skills in HTML, CSS, JavaScript, and modern frameworks. brI enjoy turning ideas into code and constantly seek new ways to grow. <br /> When I'm not coding, I'm exploring tech trends or building personal projects to enrich my portfolio. </p>
+            </div>
     </>
     );
 }

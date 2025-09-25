@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 function refreshPage() {
-  window.location.reload();
+  window.location.href = "/"
 }
 
 function Header() {
