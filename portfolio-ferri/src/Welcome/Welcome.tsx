@@ -134,7 +134,7 @@ const Welcome: React.FC = () => {
       )}
 
       <div className={`button-container${showButtons ? " show" : ""}`}>
-        <button className="project-button" onClick={() => window.location.href = "/progetti"}>
+        <button className="project-button" onClick={() => window.location.href = "/contatti"}>
           <img src={progetto} alt="" className="progetto-icona" />Have a Project?
         </button>
         <button className="readmore-button" onClick={()=>window.location.href = "/about"}>

@@ -13,6 +13,7 @@
     border-bottom: 0;
     position: relative;
     overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
     
 }
 
@@ -42,10 +43,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
-    margin-top: -100px;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px 15px;
+    padding: 15px 25px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -59,3 +58,79 @@
     font-weight: 500;
     margin: 0;
 }
+
+.second-container{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 50px;
+    margin-top: -80px;
+    ;
+}
+
+.lampadina-container {
+    display: flex;
+    justify-content: center;
+}
+
+.lampadina{
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    animation: entra 2s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+    filter: drop-shadow(0 0 16px #b993d6aa) drop-shadow(0 0 32px #8ca6db88);
+    background-color: rgba(255, 255, 255, 0.107);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+
+@keyframes entra {
+    0%{
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(80px);
+        opacity: 0;
+    }
+}
+
+.code-container {
+    display: flex;
+    justify-content: center;
+    
+}
+.code{
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    animation: esci 2s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+    filter: drop-shadow(0 0 16px #4f2c91aa) drop-shadow(0 0 32px #8ca6db88);
+    background-color: rgba(255, 255, 255, 0.107);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /*
+    animation-delay: 1s;
+    opacity: 0;
+    */
+    
+}
+
+@keyframes esci {
+    0%{ 
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(100px);
+        opacity: 1;
+    }
+}
+

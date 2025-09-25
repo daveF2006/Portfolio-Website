@@ -3,6 +3,8 @@ import Background from '../assets/Background';
 import './About.css';
 import Header from '../Header/Header';
 import { useEffect, useState } from 'react';
+import lampadina from  './lampadina.png';
+import code from './codice.png';
 
 export function About() {  
     const [showBorder, setShowBorder] = useState(false);
@@ -12,6 +14,8 @@ export function About() {
         setShowBorder(true);
         // Se vuoi che si resetti ogni volta che entri, puoi aggiungere un reset qui se necessario
     }, []);
+
+    
 
     return(
     <>
@@ -25,14 +29,23 @@ export function About() {
                 <img src={saluto} alt="" className='saluto' />
             </div>
 
-            <div className='about-text-container'>
-                <p className='about-text'>
-                    
-                        I'm Davide and I turn your ideas into code.
-                    
-                </p>
-            </div>
+            <div className='second-container'>
+                <div className='lampadina-container'>
+                    <img src={lampadina} alt="" className='lampadina' />
+                </div>
 
+                <div className='about-text-container'>
+                    <p className='about-text'>
+                        
+                            <i>I'm Davide and I turn your ideas into code.</i>
+                        
+                    </p>
+                </div>
+
+                <div className='code-container'>
+                    <img src={code} className='code' alt="" />
+                </div>
+            </div>
         </div>
     </>
     );
